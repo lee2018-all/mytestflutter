@@ -40,7 +40,7 @@ dependencies:
   permission_handler: ^11.0.1
   geolocator: ^10.1.0
   battery_info_plugin: ^0.0.21
-  device_info_plus: ^11.3.3
+  device_info_plus: ^11.3.0
   geocoding: ^2.0.1
   file_picker: ^8.1.4
   adjust_sdk: ^5.0.4

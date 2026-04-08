@@ -96,7 +96,12 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
-
+dependency_overrides:
+  # 解决 flutter_spinkit 兼容问题
+  flutter_spinkit:
+    git:
+      url: https://github.com/jogboms/flutter_spinkit.git
+      ref: master
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 

@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-const app_url = 'http://16.163.9.142:9587/cbf-admin/';
+const app_url = 'http://16.163.9.142:9587/cbf-admin';
 const ANDROID_KEY_STORE =
     "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAynQ0hllSV5OUBKtAGtKRL4jOQRKnue8QwYK/yS77ld4ZpQy0ozTise5n8JuuuuHvczHEKnghvlfltGjd/Po17qcow+oqr64xtSdhNECUwKYOK1JFjqwwwvsNbcbhcyocUDDSFhd00KXt3zMN3J2EgklgFmhVxunEfC8qy7GGAbMh+DbZo7Pzkuw96rltvKs/ckVr3YNrIUVtWnThmhviEuDMMXCXRnzG85k9Ji8ARqnmYll4Kvdcuy83IkT5sfBJNlr9Q5h5BjXGtS2hGRWKN2gFmLjVLdErcx+CZUHac8gRqL5AWKNi2do7mu+sYj3GtoMfMpUllu1SNobj2OVmGQIDAQAB";
 const PRIVATE =

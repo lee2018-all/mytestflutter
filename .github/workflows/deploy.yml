@@ -3,30 +3,41 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
 
 permissions:
-  contents: write  # peaceiris/actions-gh-pages 需要写入权限
+  contents: write
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4
+
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
+          flutter-version: '3.22.0'
           channel: 'stable'
-          
-      - run: flutter pub get
-      - run: flutter build web --release
-      
+          cache: true
+
+      - name: Get dependencies
+        run: flutter pub get
+        env:
+          PUB_HOSTED_URL: https://pub.flutter-io.cn
+          FLUTTER_STORAGE_BASE_URL: https://storage.flutter-io.cn
+
+      - name: Build web
+        run: flutter build web --release --base-href="/mytestflutter/"
+        env:
+          PUB_HOSTED_URL: https://pub.flutter-io.cn
+          FLUTTER_STORAGE_BASE_URL: https://storage.flutter-io.cn
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: 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
           publish_dir: ./build/web
-          # 如果项目在子目录中，取消注释并修改
-          # publish_branch: gh-pages
-          # destination_dir: ./your-subdirectory
+          publish_branch: gh-pages
+
+
+

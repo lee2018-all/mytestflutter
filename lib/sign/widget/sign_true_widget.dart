@@ -1,3 +1,4 @@
+/*
 import 'dart:convert';
 import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
@@ -471,3 +472,4 @@ class _SignTrueWidget extends State<SignTrueWidget>
     } catch (e) {}
   }
 }
+*/

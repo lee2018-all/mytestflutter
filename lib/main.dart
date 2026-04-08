@@ -177,7 +177,8 @@ class _MyHomePageState extends State<MyHomePage> {
       return HomePage();
     }
     if (login_status == 2) {
-      return SignTrueWidget();
+    //  return SignTrueWidget();
+      return HomePage();
     }
     return LoginPage();
   }
